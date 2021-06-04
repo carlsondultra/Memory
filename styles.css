@@ -3,3 +3,30 @@ body {
     color: white;
     font-family: arial;
 }
+
+body header {
+    height: 10vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media screen and (min-width: 600px) {
+    body header {
+        width: 600px;
+    }
+}
+
+body header .timer {
+    position: absolute;
+    top: 14%;
+    left: 3%;
+    font-size: 23px;
+    background: black;
+    width: 8vh;
+    height: 8vh;
+    line-height: 8vh;
+    border-radius: 4vh;
+    text-align: center;
+}
+
