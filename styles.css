@@ -100,3 +100,16 @@ body header .timer {
     background: green;
 }
 
+.flipper .back{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    border: 1px solid rebeccapurple;
+}
+
+#shoe{
+    background: white url("shoe.png") no-repeat center;
+    background-size: contain;
+}
