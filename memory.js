@@ -12,4 +12,11 @@ $(document).ready(function() {
     var win = false;
     var pairCount = 0;
     var time = 60;
+
+    shuffleArray(pairs);//shuffle cards
+    
+    $('.back').each(function(i, element) {
+        $(this).attr('id', pairs[i]);//sets id for cards, access styles via css
+    });
+     
 });
