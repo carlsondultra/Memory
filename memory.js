@@ -139,4 +139,34 @@ $(document).ready(function() {
         return array;
     }
     
+    function countdown () {
+        
+        countdownStarted = true;
+    
+        var timeStart = +new Date;
+        var timer = setInterval( function() {
+            
+            var timeNow = +new Date;
+            var difference = ( timeNow - timeStart ) / 1000; //calculates time difference if game isn't in focus
+            
+            if (time > 0 && !win) {// if there is still time left and game isn't won, deduct time
+                
+                time = 30; // Time of clock
+                time = Math.floor( time - difference );
+                $('.timer').text( time );
+                
+            } else if (win) {//stop timer when game is won
+                
+                clearInterval(timer);
+                
+            } else {//stop timer when time is run out
+                
+                outOfTime = true;
+                alert("you have run out of time :(");
+                
+                clearInterval(timer);
+                
+            } 
+        }, 250 );
+    };
 });
