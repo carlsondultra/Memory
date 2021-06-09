@@ -98,8 +98,36 @@ $(document).ready(function() {
                     running = false;
                     
                 }
+        
+                else {//if the brands did not match - empty the chosenCards & flip the cards back over 
+                    
+                    cardsToFlip[0] = chosenCards[0];
+                    cardsToFlip[1] = chosenCards[1];
+                    
+                    chosenCards[0] = null;
+                    chosenCards[1] = null;
+                    
+                    setTimeout(function(){//flip back the chosen cards that did not match
+        
+                        $('*[id*=' + cardsToFlip[0] + ']').each(function() {
+                            $(this).closest('.flip').toggleClass('flip');
+                        });
+                        $('*[id*=' + cardsToFlip[1] + ']').each(function() {
+                            $(this).closest('.flip').toggleClass('flip');
+                        });
+                        
+                        running = false;
+                        
+                    }, 800);
+                }
+                
             }
-        }
-    });
+                
+        } else {
+            alert("you have run out of time :(");
+        };
+        
+    });//Flip Container On Click Finished
+    
     
 });
