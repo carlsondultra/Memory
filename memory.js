@@ -18,5 +18,32 @@ $(document).ready(function() {
     $('.back').each(function(i, element) {
         $(this).attr('id', pairs[i]);//sets id for cards, access styles via css
     });
-     
+
+    $('.flip-container').click(function(){ //Once flip-container is clicked, function activates
+        
+        if (!outOfTime) {
+        
+            if (!gameStarted && !running){  //before the game starts, show all cards to the user face up, then flip back the cards
+                
+                running = true;
+                
+                $('.flip-container').each(function() {
+                    $(this).toggleClass('flip');
+                });
+                
+                setTimeout(function() {
+                    
+                    $('.flip-container').each(function() {
+                        $(this).toggleClass('flip');
+                    });
+                    
+                    gameStarted = true;
+                    running = false;
+                    
+                }, 2000);
+            }
+    
+        }
+    });
+    
 });
