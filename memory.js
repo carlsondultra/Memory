@@ -18,7 +18,7 @@ $(document).ready(function() {
     $('.back').each(function(i, element) {
         $(this).attr('id', pairs[i]);//sets id for cards, access styles via css
     });
-
+    
     $('.flip-container').click(function(){ //Once flip-container is clicked, function activates
         
         if (!outOfTime) {
@@ -43,6 +43,62 @@ $(document).ready(function() {
                 }, 2000);
             }
     
+            else if ($(this).find('.back').attr('id') == chosenCards[0] && chosenCards[1] == null && $(this).hasClass('flip') && !running) {
+                
+                running = true;
+                
+                chosenCards[0] = null;//if one card has been chosen and then clicked again, flip back over
+                $(this).toggleClass('flip');
+                
+                running = false;
+                
+            }
+            
+            else if ($(this).hasClass('flip')) {
+                        
+                return;//if the card clicked is already flipped, return
+                
+            }
+        
+            else if (chosenCards[0] == null && chosenCards[1] == null && !$(this).hasClass('flip') && !running) {
+                
+                if (!countdownStarted) {
+                    countdown();
+                }
+                
+                running = true;
+                
+                chosenCards[0] = $(this).find('.back').attr('id');//if no cards have been chosen, store the chosen card's in chosenCards[0]
+                $(this).toggleClass('flip');
+                
+                running = false;
+                
+            }
+        
+            
+            else if (chosenCards[0] != null && chosenCards[1] == null && !$(this).hasClass('flip') && !running) {
+                
+                running = true;
+                
+                chosenCards[1] = $(this).find('.back').attr('id');//if no second card has been flipped, store the chosen card's brand in chosenCards[1] and flip it
+                $(this).toggleClass('flip');
+        
+                if (chosenCards[0] == chosenCards[1]) {
+                    
+                    chosenCards[0] = null;
+                    chosenCards[1] = null;
+                    
+                    pairCount++;
+                    
+                    if (pairCount == cards.length) {
+                        win = true;
+                        alert("you win :D");
+                    }
+                    
+                    running = false;
+                    
+                }
+            }
         }
     });
     
