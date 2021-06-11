@@ -92,7 +92,7 @@ $(document).ready(function() {
                     
                     if (pairCount == cards.length) {
                         win = true;
-                        alert("you win :D");
+                        alert("You win!");
                     }
                     
                     running = false;

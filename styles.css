@@ -16,7 +16,7 @@ body header {
         width: 600px;
     }
 }
-
+/*Timer*/
 body header .timer {
     position: absolute;
     top: 14%;
@@ -28,6 +28,15 @@ body header .timer {
     line-height: 8vh;
     border-radius: 4vh;
     text-align: center;
+}
+
+/*Title*/
+body header .title {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 23px;
+    color: black;
 }
 
 .game {
@@ -88,7 +97,7 @@ body header .timer {
     left: 0;
     height: 100%;
     width: 100%;
-    box-shadow: gold 0 8px 2px;
+    box-shadow: red 0 8px 2px;
 } 
 /* Frontside */
 .flipper .front{
@@ -97,7 +106,7 @@ body header .timer {
     -ms-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
-    background: green;
+    background: black;
 }
 
 .flipper .back{
@@ -106,45 +115,45 @@ body header .timer {
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    border: 1px solid rebeccapurple;
+    border: 1px solid red;
 }
 
 #shoe{
-    background: white url("shoe.png") no-repeat center;
+    background: #CCC url("shoe.png") no-repeat center;
     background-size: contain;
 }
 
 #bred{
-    background: white url("bredtoe.png") no-repeat center;
+    background: #CCC url("bredtoe.png") no-repeat center;
     background-size: contain;
 }
 
 #dior {
-    background: white url("dior.jpg") no-repeat center;
+    background: #CCC url("dior.jpg") no-repeat center;
     background-size: contain;
 }
 
 #mocha{
-    background: white url("mocha.jpg") no-repeat center;
+    background: #CCC url("mocha.jpg") no-repeat center;
     background-size: contain;
 }
 
 #blackwhite{
-    background: white url("blackwhite.png") no-repeat center;
+    background: #CCC url("blackwhite.png") no-repeat center;
     background-size: contain;
 }
 
 #universityblue{
-    background: white url("universityblue.png") no-repeat center;
+    background: #CCC url("universityblue.png") no-repeat center;
     background-size: contain;
 }
 
 #sbb{
-    background: white url("sbb.jpg") no-repeat center;
+    background: #CCC url("sbb.jpg") no-repeat center;
     background-size: contain;
 }
 
 #shadow{
-    background: white url("shadow.jpg") no-repeat center;
+    background: #CCC url("shadow.jpg") no-repeat center;
     background-size: contain;
 }
