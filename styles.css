@@ -119,41 +119,41 @@ body header .title {
 }
 
 #shoe{
-    background: #CCC url("shoe.png") no-repeat center;
+    background: white url("royaltoe.png") no-repeat center;
     background-size: contain;
 }
 
 #bred{
-    background: #CCC url("bredtoe.png") no-repeat center;
+    background: white url("bredtoe.png") no-repeat center;
     background-size: contain;
 }
 
 #dior {
-    background: #CCC url("dior.jpg") no-repeat center;
+    background: white url("dior.jpg") no-repeat center;
     background-size: contain;
 }
 
 #mocha{
-    background: #CCC url("mocha.jpg") no-repeat center;
+    background: white url("mocha.jpg") no-repeat center;
     background-size: contain;
 }
 
 #blackwhite{
-    background: #CCC url("blackwhite.png") no-repeat center;
+    background: white url("blackwhite.png") no-repeat center;
     background-size: contain;
 }
 
 #universityblue{
-    background: #CCC url("universityblue.png") no-repeat center;
+    background: white url("universityblue.png") no-repeat center;
     background-size: contain;
 }
 
 #sbb{
-    background: #CCC url("sbb.jpg") no-repeat center;
+    background: white url("sbb.jpg") no-repeat center;
     background-size: contain;
 }
 
 #shadow{
-    background: #CCC url("shadow.jpg") no-repeat center;
+    background: white url("shadow.jpg") no-repeat center;
     background-size: contain;
 }
